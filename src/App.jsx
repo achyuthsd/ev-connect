@@ -15,7 +15,7 @@ const router = createBrowserRouter([
   //   element: <><Nav /><Home /><Footer /></>,
   // },
   {
-    path: "/ev-connect",
+    path: "/ev-connect/",
     element: <><Nav /><Home /><Footer /></>,
   },
   {
