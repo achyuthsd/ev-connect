@@ -40,7 +40,7 @@ function App() {
   return (
     <AuthProvider>
       {/* Set the base path for React Router */}
-      <RouterProvider router={router} basename="/ev-connect" />
+      <RouterProvider router={router} basename="/ev-connect/" />
     </AuthProvider>
   );
 }
