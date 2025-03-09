@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg';
 import './App.css';
 import Footer from './Footer';
 import Login from './Login';
-import Selection from './selection';
+import Selection from './Selection';
 import Booking from './booking';
 import Nav from './Nav';
 import Signup from './Signup';
