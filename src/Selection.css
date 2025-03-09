@@ -1,0 +1,109 @@
+.selectdatehead{
+    background-color: rgb(245, 240, 240);
+    padding: 0px 30px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    font-size: 30px;
+    font-weight:600;
+}
+
+.selectdatedesc{
+    padding: 0px 30px;
+    color: #04ac47;
+    font-size: 15px;
+    font-weight: 500;
+    padding-bottom: 35px;
+}
+
+.days{
+    padding: 0px 150px;
+display: flex;
+gap: 80px;
+padding-bottom: 30px;
+}
+.day{
+    border: 2px solid black;
+    width: 100px;
+    border-radius: 6px;
+    text-align: center;
+    align-content: center;
+    min-height: 30px;
+    cursor: pointer;
+}
+
+
+
+
+
+.station{
+    border: 2px solid black;
+    width: 200px;
+    min-height: 350px;
+    border-radius: 8px;
+    padding: 5px;
+    cursor: pointer;
+}
+.stations{
+    padding: 0px 150px;
+    display: flex;
+    gap: 80px;
+    padding-bottom: 30px;
+  
+    
+}
+.hy{
+    font-size: 100px;
+
+}
+
+.stationimg{
+    text-align: center;
+    height: 200px;
+    align-content: center;
+}
+.stationname{
+    justify-content: center;
+    text-align: center;
+    font-size: 27px;
+    font-weight: 500;
+}
+.stationdesc{
+    height: 115px;
+    font-size: 15px;
+    padding: 10px 10px;
+    align-content: center;
+    line-height: 24px;
+}
+
+
+.selconf{
+    margin-top: 20px;
+    width: 130px;
+    height: 30px;
+    margin-left: 80px;
+    margin-bottom: 120px;
+    color: white;
+    background-color: #04ac47;
+    border: none;
+    border-radius: 7px;
+    font-size: 18px;
+    padding: 5px;
+    font-weight: 550;
+    cursor: pointer;
+}
+.selconf:hover{
+  opacity: 0.7;
+}
+
+.active {
+    color: white;
+    background-color: #09bf52;
+    font-weight: bold;
+    border: 2px solid rgb(0, 0, 0);
+  }
+
+  .station.active {
+    background-color: #09bf52;
+    color: white;
+    border: 2px solid black;
+  }

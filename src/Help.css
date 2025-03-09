@@ -1,0 +1,70 @@
+.helpcont{
+    height: 100vh;
+    margin-top: 40px;
+   font-size: 25px;
+}
+
+*{
+    font-family: "Ubuntu", serif;
+    font-weight: 400;
+    font-style: normal;
+   
+}
+
+body{
+    background-color: rgb(245, 240, 240);
+}
+
+.helphead{
+    background-color: rgb(245, 240, 240);
+    padding-bottom: 10px;
+    font-size: 28px;
+    font-weight:600;
+    margin-left: 40px;
+}
+.helpdesc{
+    font-size: 15px;
+    margin-left: 40px;
+    color:rgb(32, 157, 32);
+    font-weight: 550;
+    margin-top: 10px;
+}
+
+.name{
+    width:300px;
+    height: 25px;
+    border: 1px solid black;
+    margin-left: 80px;
+    border-radius: 5px;
+}
+.namelab{
+    font-size: 18px;
+    margin-left: 80px;
+    margin-top: 40px;
+    
+}
+
+.cominp{
+    margin-top: 40px;
+    height: 180px;
+    width: 500px;
+   resize: none;
+   border-radius: 6px;
+   border: 1px solid black;
+   margin-left: 80px;
+   padding: 10px;
+} 
+.confirm1{
+    margin-left: 80px;
+    margin-top: 40px;
+    color: white;
+    background-color: #04ac47;
+    border: none;
+    border-radius: 6px;
+    padding: 5px 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.confirm1:hover{
+   opacity: 0.7;
+}

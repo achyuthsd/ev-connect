@@ -1,0 +1,180 @@
+.logincont{
+    background-color: rgb(245, 240, 240);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+  }
+.mainlogin{
+  width: 800px;
+ display: flex;
+ overflow: hidden;
+  height: 400px;
+  margin-bottom: 60px;
+  border-radius: 20px;
+  border: solid rgb(93, 87, 87) 1px;
+  background-color: white; /* Optional background color */
+  border: 1px solid #eeeded; /* Optional border */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Shadow settings */
+  margin: 50px auto; /* Center the div horizontally */
+
+}
+
+.loginleft{
+padding: 40px;
+width: 50%;
+height: 100%;
+display: flex;
+background-color: white;
+align-items: center;
+}
+.loginright{
+    width: 50%;
+    height: 100%;
+    
+
+}
+.loginright img{
+    object-fit: cover; /* Ensures the image fills the container */
+    object-position: 40% 10%; /* Moves the view window (X% Y%) */
+   width: 100%;
+    height: 400px;
+
+
+}
+
+.login-with-google-btn {
+   
+      
+    padding: 12px 16px 12px 42px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 1px rgba(0, 0, 0, .25);
+    
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+    
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=);
+    background-color: rgb(24, 228, 20);
+    background-repeat: no-repeat;
+    background-position: 12px 11px;
+}  
+
+.logintext{
+  font-size: 35px;
+  margin-bottom: 20px;
+  font-family: "Ubuntu", serif;
+    font-weight: 400;
+    color: #06bc4f;
+    font-style: normal;
+    font-weight: 800;
+}
+
+.emaillogin{
+  width: 300px;
+  height: 30px;
+  padding: 8px;
+  border-radius: 15px;
+  border: 1px solid green;
+  font-family: "Ubuntu", serif;
+  font-weight: 400;
+}
+
+.passlogin{
+  width: 300px;
+  height: 30px;
+  padding: 8px;
+  border-radius: 15px;
+  border: 1px solid green;
+  margin-top: 10px;
+  font-family: "Ubuntu", serif;
+  font-weight: 400;
+}
+
+.forgot{
+  color: #06bc4f;
+  font-size: 14px;
+margin-top: 3px;
+}
+
+.login-button{
+  width: 300px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #06bc4f;
+  border: none;
+  margin-top: 10px;
+  color: white;
+  font-family: "Ubuntu", serif;
+  font-weight: 800;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+
+.login-button:hover{
+  opacity: 0.8;
+}
+
+
+.or{
+  
+  color: #06bc4f;
+  text-align: center;
+}
+
+.signup-button{
+  width: 300px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #06bc4f;
+  border: none;
+  margin-top: 3px;
+  color: white;
+  font-family: "Ubuntu", serif;
+  font-weight: 800;
+  font-size: 15px;
+  cursor: pointer;
+}
+.password-checkbox {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 12px;
+  margin-left: 180px;
+}
+
+.password-checkbox input {
+  margin-right: 10px;
+}
+.password-checkbox input[type="checkbox"] {
+  -webkit-appearance: none; 
+  -moz-appearance: none;    
+  appearance: none;         
+  width: 15px;
+  height: 15px;
+  border: 2px solid #ccc; 
+  border-radius: 4px; 
+  cursor: pointer;
+  position: relative;
+
+}
+
+.password-checkbox input[type="checkbox"]:checked {
+  background-color: #28a745; 
+  border-color: #28a745; 
+}
+
+.password-checkbox input[type="checkbox"]:checked::before {
+  content: "✔"; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  color: white; 
+}
