@@ -5,8 +5,11 @@
       "destination": "/index.html"
     }
   ],
+  "static": {
+    "source": "/ev-connect/**",
+    "destination": "/index.html"
+  },
   "redirects": [],
   "headers": [],
   "cleanUrls": true
 }
-
