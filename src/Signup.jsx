@@ -83,7 +83,7 @@ const Signup = () => {
           {/* Right Side Image */}
           <div className="loginright">
             <img
-              src="vehicle-electric-charger-station-silhouette-icon-ecology-charge-for-ev-glyph-green-pictogram-electro-station-with-plug-for-ecological-car-icon-eco-friendly-charger-isolated-illustration-vector.jpg"
+              src="/vehicle-electric-charger-station-silhouette-icon-ecology-charge-for-ev-glyph-green-pictogram-electro-station-with-plug-for-ecological-car-icon-eco-friendly-charger-isolated-illustration-vector.jpg"
               alt="EV Charger"
             />
           </div>

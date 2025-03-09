@@ -59,7 +59,7 @@ html{
   background-size: cover; 
   background: 
   linear-gradient(rgba(0, 0, 0, 0.5), rgb(0, 0, 0)), /* Gradient overlay */
-  url('WhatsApp Image 2025-01-15 at 00.58.15_a63f847f.jpg');
+  url('/WhatsApp Image 2025-01-15 at 00.58.15_a63f847f.jpg');
   background-position: center; 
   /* background-repeat: no-repeat;  */
   display: flex;
@@ -368,7 +368,7 @@ padding-left: 40px;
   display: flex;
   background-color: aqua;
   justify-content: center; 
-  background-image: url('ev-driving-lisence.jpg');
+  background-image: url('/ev-driving-lisence.jpg');
     background-size: cover;
     background-position: center;
   width: 100%;
@@ -391,7 +391,7 @@ overflow: hidden;
   display: flex;
   background-color: aqua;
   justify-content: center; 
-  background-image: url('istockphoto-1402430797-612x612.jpg');
+  background-image: url('/istockphoto-1402430797-612x612.jpg');
   background-position: 80% 50%; 
     background-size: cover;
     /* background-position: center; */
@@ -432,10 +432,10 @@ overflow: hidden;
   line-height: 25px;
 }
 .jko{
-  background-image: url("Untitled-design-2022-11-09T145550.471-700x394.webp");
+  background-image: url("/Untitled-design-2022-11-09T145550.471-700x394.webp");
 }
 .jkb{
-  background-image: url("globe.jpg");
+  background-image: url("/globe.jpg");
 }
 
 
