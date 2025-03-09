@@ -5,7 +5,7 @@ import './App.css';
 import Footer from './Footer';
 import Login from './Login';
 import Selection from './Selection';
-import Booking from './booking';
+import Booking from './Booking';
 import Nav from './Nav';
 import Signup from './Signup';
 import Home from './Home';
