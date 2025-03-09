@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import "./selection.css";
+import "./Selection.css";
 import { createBrowserRouter, RouterProvider,useNavigate } from 'react-router-dom'
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Booking from './Booking';
