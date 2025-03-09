@@ -2,7 +2,7 @@
     "rewrites": [
       {
         "source": "/ev-connect/",
-        "destination": "/index.html"
+        "destination": "/Home.js"
       }
     ],
     "redirects": [],
