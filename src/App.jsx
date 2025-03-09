@@ -1,5 +1,13 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { AuthProvider } from "./AuthContext";
+import Nav from './Nav';
+import Footer from './Footer';
+import Home from './Home';
+import Login from './Login';
+import Selection from './Selection';
+import Booking from './Booking';
+import Signup from './Signup';
+import Help from './Help';
 
 const router = createBrowserRouter([
   {
