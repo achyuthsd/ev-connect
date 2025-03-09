@@ -34,6 +34,11 @@ const router = createBrowserRouter([
     path: "/ev-connect/help",
     element: <><Nav /><Help /><Footer /></>,
   },
+  // Fallback route if user directly accesses "/"
+  {
+    path: "/",
+    element: <><Nav /><Home /><Footer /></>, // This could redirect to /ev-connect or render the same as Home
+  }
 ]);
 
 function App() {
