@@ -10,10 +10,6 @@ import Signup from './Signup';
 import Help from './Help';
 
 const router = createBrowserRouter([
-  // {
-  //   path: "/",
-  //   element: <><Nav /><Home /><Footer /></>,
-  // },
   {
     path: "/ev-connect/",
     element: <><Nav /><Home /><Footer /></>,
@@ -43,7 +39,8 @@ const router = createBrowserRouter([
 function App() {
   return (
     <AuthProvider>
-      <RouterProvider router={router} />
+      {/* Set the base path for React Router */}
+      <RouterProvider router={router} basename="/ev-connect" />
     </AuthProvider>
   );
 }
