@@ -1,8 +1,8 @@
 {
     "rewrites": [
       {
-        "source": "/ev-connect/",
-        "destination": "/Home.jsx"
+        "source": "/",
+        "destination": "/index.html"
       }
     ],
     "redirects": [],
