@@ -10,12 +10,12 @@ import Signup from './Signup';
 import Help from './Help';
 
 const router = createBrowserRouter([
+  // {
+  //   path: "/",
+  //   element: <><Nav /><Home /><Footer /></>,
+  // },
   {
-    path: "/",
-    element: <><Nav /><Home /><Footer /></>,
-  },
-  {
-    path: "/ev-connect/",
+    path: "/ev-connect",
     element: <><Nav /><Home /><Footer /></>,
   },
   {
