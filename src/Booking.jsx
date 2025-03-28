@@ -2,7 +2,47 @@ import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { db, auth } from "./firebase";
 import { collection, addDoc, getDocs, query, where } from "firebase/firestore";
-import "./Booking.css"
+import "./Booking.css";
+import emailjs from '@emailjs/browser';
+
+const sendEmail = (bookingDetails) => {
+  const { userEmail, stationName, portNumber, date, time } = bookingDetails;
+
+  // Debugging: Check if email is valid
+  if (!userEmail) {
+    console.error("❌ Email is missing in booking details.");
+    return;
+  }
+
+  console.log('📧 Sending email to:', userEmail); // Log email before sending
+
+  const templateParams = {
+    to_email: userEmail,  // Make sure this is passed directly to EmailJS
+    user_name: auth.currentUser.displayName || "User",  // Use display name or fallback to "User"
+    station_name: stationName,
+    port_number: portNumber,
+    booking_date: date,
+    booking_time: time,
+  };
+
+  console.log('🚨 Template Params:', templateParams); // Log template params to check the email
+
+  emailjs
+    .send(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      templateParams,
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    )
+    .then((response) => {
+      console.log('✅ Email sent:', response.status, response.text);
+    })
+    .catch((error) => {
+      console.error('❌ Failed to send email:', error);
+    });
+};
+
+
 const BookingPage = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -21,7 +61,7 @@ const BookingPage = () => {
       if (!auth.currentUser) return;
 
       setUserId(auth.currentUser.uid);
-      
+
       const q = query(
         collection(db, "reservations"),
         where("date", "==", date),
@@ -35,7 +75,7 @@ const BookingPage = () => {
       querySnapshot.forEach((doc) => {
         const data = doc.data();
         data.slots.forEach((slot) => {
-          slotsData[slot] = data.userId; // Store userId for each reserved slot
+          slotsData[slot] = data.userId;
         });
       });
 
@@ -58,7 +98,18 @@ const BookingPage = () => {
       return;
     }
 
+    const userEmail = auth.currentUser.email;
+
+    if (!userEmail) {
+      alert("Email not available for user.");
+      console.error("❌ User email not available");
+      return;
+    }
+
+    console.log('📧 Confirming booking for user:', userEmail); // Log email for confirmation
+
     try {
+      // Store the booking in Firestore
       await addDoc(collection(db, "reservations"), {
         userId: auth.currentUser.uid,
         date,
@@ -68,7 +119,16 @@ const BookingPage = () => {
         timestamp: new Date(),
       });
 
-      alert("Booking confirmed!");
+      // Send booking confirmation email
+      sendEmail({
+        userEmail: userEmail,
+        stationName: station,
+        portNumber: port,
+        date: date,
+        time: selectedSlots.join(", "),
+      });
+
+      alert("Booking confirmed!\nBooking details has been sent to your mail.");
       navigate("/ev-connect/");
     } catch (error) {
       console.error("Error booking slot:", error);
@@ -77,73 +137,71 @@ const BookingPage = () => {
 
   return (
     <div className="cont1">
-      <div className="main-booking">
-        Select a time slot 
-      </div>
+      <div className="main-booking">Select a time slot</div>
       <div className="main-book">
-      Day: <span className="gold">{date}</span> <br /> Station: <span className="gold">Station {station}</span> <br /> Port:  <span className="gold">Port {port}</span>
-
+        Day: <span className="gold">{date}</span> <br /> Station: <span className="gold">Station {station}</span> <br /> Port: <span className="gold">Port {port}</span>
       </div>
 
-<div className="descbook">
-*Please select the time slots you want to book by clicking on them and click "Confirm Booking" to confirm your booking
-</div>
-<div className="one">
-  <button className="trans"></button>
- 
- <div className="avalslot">
- - available slots
-  </div> 
-</div>
-<div className="one two">
-  <button className="trans trans2"></button>
- 
- <div className="avalslot bookuslot">
- - slots booked by you
-  </div> 
-</div>
-<div className="one three">
-  <button className="trans trans3"></button>
- 
- <div className="avalslot bookoslot">
- - slots booked by others
-  </div> 
-</div>
+      <div className="descbook">
+        *Please select the time slots you want to book by clicking on them and click "Confirm Booking" to confirm your booking
+      </div>
 
-      <div  className="slots" style={{ display: "grid", gridTemplateColumns: "repeat(6, 150px)", gap: "20px" }}>
+      <div className="one">
+        <button className="trans"></button>
+        <div className="avalslot">- available slots</div>
+      </div>
+      <div className="one two">
+        <button className="trans trans2"></button>
+        <div className="avalslot bookuslot">- slots booked by you</div>
+      </div>
+      <div className="one three">
+        <button className="trans trans3"></button>
+        <div className="avalslot bookoslot">- slots booked by others</div>
+      </div>
+
+      <div
+        className="slots"
+        style={{ display: "grid", gridTemplateColumns: "repeat(6, 150px)", gap: "20px" }}
+      >
         {hours.map((hour) => {
-          let bgColor = "white"; 
+          let bgColor = "white";
           let color = "black";
 
           if (reservedSlots[hour]) {
-            bgColor = reservedSlots[hour] === userId ? "blue" : "red"; // Blue for user's slots, Red for others
-            color = "white"
+            bgColor = reservedSlots[hour] === userId ? "rgb(98, 98, 241)" : "rgba(241, 63, 63, 0.82)";
+            color = "white";
           } else if (selectedSlots.includes(hour)) {
-            bgColor = "rgb(47, 232, 90)"; // Green for currently selected slots
-            color="white"
+            bgColor = "rgba(98, 245, 85, 0.82)";
+            color = "white";
           }
 
           return (
             <button
               key={hour}
               onClick={() => toggleSlot(hour)}
-              disabled={reservedSlots[hour] && reservedSlots[hour] !== userId} // Disable already booked slots by others
+              disabled={reservedSlots[hour] && reservedSlots[hour] !== userId}
               style={{
                 background: bgColor,
                 color: color,
                 padding: "10px",
                 borderRadius: "10px",
-                fontSize:"15px",
+                fontSize: "15px",
                 cursor: reservedSlots[hour] && reservedSlots[hour] !== userId ? "not-allowed" : "pointer",
               }}
             >
-              {hour}:00 - {hour+1}:00
+              {hour}:00 - {hour + 1}:00
             </button>
           );
         })}
       </div>
 
-      <button className="conf"onClick={handleConfirm} style={{ marginTop: "50px", width:"140px",height:"35px", backgroundColor:"rgb(0, 0, 0)",color:"white",borderRadius:"10px" }}>Confirm Booking</button>
+      <button
+        className="conf"
+        onClick={handleConfirm}
+        style={{ marginTop: "50px", width: "140px", height: "35px", backgroundColor: "rgb(0, 0, 0)", color: "white", borderRadius: "10px" }}
+      >
+        Confirm Booking
+      </button>
     </div>
   );
 };
