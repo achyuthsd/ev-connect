@@ -16,7 +16,7 @@ const LogoutButton = () => {
   };
 
   return (
-    <div style ={{color:"black",cursor:"pointer",backgroundColor:"white",borderRadius:"6px",width:"60px",padding:"1px 5px"}} className="logout" onClick={handleLogout}>Logout</div>
+    <div style ={{color:"black",cursor:"pointer",backgroundColor:"white",borderRadius:"6px",width:"70px",padding:"1px 5px"}} className="logout" onClick={handleLogout}>Signout</div>
   );
 };
 

@@ -412,6 +412,22 @@ overflow: hidden;
 
 }
 
+
+.footerbottom{
+  text-align: center;
+  line-height: 50px;
+background-color: rgb(22, 21, 26);
+ /* background-color: rgb(119, 216, 16); */
+}
+.footer{
+  background-color: rgb(22, 21, 26);
+  height: 40vh;
+}
+.footertop{
+  background-color: rgb(22, 21, 26);
+}
+
+
 .more1lefthead{
   font-size: 30px;
   padding: 15px;
@@ -443,7 +459,7 @@ overflow: hidden;
 .nav-links a {
   text-decoration: none;
  color: white;
-  
+
  
 }
 
@@ -462,4 +478,97 @@ overflow: hidden;
 .nav-links li {
   display: inline-block;
   
+}
+
+/* Navbar Styles */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  /* background-color: #1e1e1e; */
+  color: white;
+}
+
+/* Logo Section */
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+#ico {
+  margin-left: 8px;
+  font-size: 1.5rem;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  
+}
+
+/* Menu Items */
+.menu-items {
+  display: flex;
+  gap: 20px;
+}
+
+.menu-items ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .menu-items {
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    /* background-color: #1e1e1e; */
+    width: 100%;
+    padding: 20px;
+    display: none;
+   
+  }
+
+  .menu-items.active {
+    display: flex;
+    border: none;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+.more1{
+  flex-direction: column;
+}
+
+.more1left{
+  width: 80vw;
+}
+
+.w80{
+  width: 80vw;
+}
+
+
+.more2{
+  flex-direction: column;
+}
+
+
+
 }

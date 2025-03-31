@@ -76,6 +76,7 @@ const Selection = () => {
               key={index}
               id={`day00${index + 1}`}
               className={`day${index + 1} day ${selectedDay === `Day ${index + 1}` ? "active" : ""}`}
+              
               onClick={() => handleClick(day, index)}
             >
              {day}

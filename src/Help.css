@@ -1,5 +1,5 @@
 .helpcont{
-    height: 100vh;
+    height: 120vh;
     margin-top: 40px;
    font-size: 25px;
 }
@@ -67,4 +67,26 @@ body{
 }
 .confirm1:hover{
    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+   .comment{
+    
+    height: 40vh;
+   }
+
+   .cominp{
+    width: 60vw;
+    height: 40vh;
+    
+   }
+
+   .conbtn{
+    margin-top: 40px;
+   }
+.name{
+    width: 60vw;
+}
+
+
 }

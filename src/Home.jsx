@@ -130,7 +130,7 @@ Beyond environmental benefits, EVs promise advancements in autonomous driving, c
               </div>
 
             </div>
-            <div className="more1right">
+            <div className="more1right w80">
               <div className="more1rightimg">
              
               </div>
@@ -156,7 +156,7 @@ Beyond environmental benefits, EVs promise advancements in autonomous driving, c
               </div>
 
             </div>
-            <div className="more1right">
+            <div className="more1right w80">
               <div className="more1rightimg jko">
               
               </div>

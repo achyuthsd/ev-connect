@@ -13,7 +13,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="footerbottom">
-            Copyright&copy;2025 | Designed by Achyuth S
+            Copyright&copy;2025 <br /> Designed by EV Connect Team⚡⚡⚡
           </div>
          </div>
   )

@@ -1,7 +1,10 @@
 .slots{
     
     margin-left: 40px;
-   
+     display: grid;
+      grid-template-columns: repeat(6, 150px);
+       gap: 20px;
+     
 }
 
 .hours{
@@ -100,4 +103,38 @@ color: gray;
 
 .three{
     margin-bottom: 45px;
+}
+
+@media (max-width: 768px) {
+
+  .slots{
+   
+    overflow: hidden;
+    display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 20px;
+  }
+}
+@media (max-width: 1111px) {
+
+  .slots{
+   
+    overflow: hidden;
+    display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 20px;
+  }
+}
+@media (max-width: 519px) {
+
+  .slots{
+    
+    overflow: hidden;
+    display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  gap: 20px;
+  }
 }

@@ -161,7 +161,7 @@ const BookingPage = () => {
 
       <div
         className="slots"
-        style={{ display: "grid", gridTemplateColumns: "repeat(6, 150px)", gap: "20px" }}
+        
       >
         {hours.map((hour) => {
           let bgColor = "white";

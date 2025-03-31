@@ -5,6 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
    
   }
 .mainlogin{
@@ -29,11 +30,12 @@ height: 100%;
 display: flex;
 background-color: white;
 align-items: center;
+
 }
 .loginright{
     width: 50%;
     height: 100%;
-    
+   
 
 }
 .loginright img{
@@ -177,4 +179,15 @@ margin-top: 3px;
   transform: translate(-50%, -50%);
   font-size: 12px;
   color: white; 
+}
+
+@media (max-width: 768px) {
+
+  .loginright{
+    display: none;
+  }
+
+  .mainlogin{
+    width: 80vw;
+  }
 }

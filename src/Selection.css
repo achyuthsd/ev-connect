@@ -29,6 +29,8 @@ padding-bottom: 30px;
     align-content: center;
     min-height: 30px;
     cursor: pointer;
+    width: 140px;
+    height: 40px;
 }
 
 
@@ -41,6 +43,7 @@ padding-bottom: 30px;
     min-height: 350px;
     border-radius: 8px;
     padding: 5px;
+   
     cursor: pointer;
 }
 .stations{
@@ -106,4 +109,32 @@ padding-bottom: 30px;
     background-color: #09bf52;
     color: white;
     border: 2px solid black;
+  }
+
+  @media (max-width: 768px) {
+
+    .days{
+        flex-direction: column;
+        gap: 50px;
+    }
+.day{
+    width: 140px;
+    height: 40px;
+}
+  .stations{
+   flex-direction: column;
+  }
+
+.cont{
+  margin-bottom: 140px;
+}
+
+
+
+  }
+  @media (max-width: 1021px) {
+    .stations{
+        flex-direction: column;
+       }
+
   }
